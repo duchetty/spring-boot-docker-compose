@@ -6,16 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@RestController
 public class SpringBootDockerComposeApplication {
 	
-	private int count;
 	
-	@GetMapping("/")
-	public String getMessage()
-	{
-		return "Welcome to Docker Compose "+ count + "times";
-	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootDockerComposeApplication.class, args);
