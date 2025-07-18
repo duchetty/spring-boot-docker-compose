@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  application:
+    image: spring-boot-docker-compose
+    ports:
+      - "8080:8080"
+    networks:
+      - springboot-db-net
+    depends_on:
+      - oracledb
+    volumes:
+      - /data/springboot-app
+
+  oracledb:
+    image: gvenzl/oracle-xe:21-slim  # Oracle XE lightweight image
+    ports:
+      - "1521:1521"
+    environment:
+      - ORACLE_PASSWORD=0614  # sets password for user 'oracle'
+      - ORACLE_DATABASE=xe
+    networks:
+      - springboot-db-net
+    volumes:
+      - /data/oracle
+
+networks:
+  springboot-db-net:
