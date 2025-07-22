@@ -19,7 +19,7 @@ public class BookController {
 	
 	private int count;
 	
-	@GetMapping("/")
+	@GetMapping("/message")
 	public String getMessage()
 	{
 		count++;
