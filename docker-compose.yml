@@ -14,10 +14,11 @@ services:
 
   oracledb:
     image: gvenzl/oracle-xe:21-slim  # Oracle XE lightweight image
+    shm_size: 1gb                   
     ports:
       - "1521:1521"
     environment:
-      - ORACLE_PASSWORD=0614  # sets password for user 'oracle'
+      - ORACLE_PASSWORD=0614  
       - ORACLE_DATABASE=xe
     networks:
       - springboot-db-net
