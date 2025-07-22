@@ -2,7 +2,7 @@ version: "3"
 
 services:
   application:
-    build: spring-boot-docker-compose
+    build: .
     ports:
       - "8080:8080"
     networks:
