@@ -13,8 +13,7 @@ services:
       - /data/springboot-app
 
   oracledb:
-    image: gvenzl/oracle-xe:21-slim  # Oracle XE lightweight image
-    shm_size: 1gb                   
+    image: gvenzl/oracle-xe:21-slim  # Oracle XE lightweight image                 
     ports:
       - "1521:1521"
     environment:
